@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+  
+        <div id="calculator">
+                <div class="display">{{current ||0}}</div>
+                <div @click='clear' class="btn">C</div>
+                <div @click='sign' class="btn">+/-</div>
+                <div @click='percent' class="btn">%</div>
+                <div @click="divide" class="btn operator">/</div>
+                <div @click="append('7')" class="btn">7</div>
+                <div @click="append('8')" class="btn">8</div>
+                <div @click="append('9')" class="btn">9</div>
+                <div @click="multiply" class="btn operator">*</div>
+                <div @click="append('4')" class="btn">4</div>
+                <div @click="append('5')" class="btn">5</div>
+                <div @click="append('6')" class="btn">6</div>
+                <div @click="minus" class="btn operator">-</div>
+                <div @click="append('1')" class="btn">1</div>
+                <div @click="append('2')" class="btn">2</div>
+                <div @click="append('3')" class="btn">3</div>
+                <div @click="add" class="btn operator">+</div>
+                <div @click="append('0')" class="btn" id="zero">0</div>
+                <div @click='dot' class="btn">.</div>
+                <div @click="equal" class="btn operator" >=</div>
+                
+        </div>
+   
+    <style scoped>
+        #calculator{
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: minmax(50px, auto);
+            font-size: 40px;
+            width: 400px;
+            background-color: #f2f2f2;
+            height:550px;
+        }
+        .display{
+            grid-column: 1 / 5;
+            background-color: rgba(0, 0, 0, 0.692);
+            border: 2px solid black;
+            color: white;
+            text-align: right;
+            font-size: 50px;
+            position: sticky;
+        }
+        #zero{
+            grid-column: 1 / 3;
+        }
+        .btn{
+            border: 1px solid black;
+            text-align: center;
+        }
+        .btn:hover{
+            background-color: blanchedalmond;
+            transition: .3;
+        }
+        .operator{
+            background-color: rgba(255, 166, 0, 0.829);
+            color: white;
+        }
+    </style>
+  
+
+     <script src="C:\Users\KESTONE\Desktop\notes\sites\vue.js"></script>
+    <script src="calculator.js"></script>
+</body>
+</html>
